@@ -17,6 +17,11 @@ function findMatches(wordToMatch, cities) {
 const searchInput = document.querySelector(".search");
 const suggestion = document.querySelector(".suggestions");
 
+//function taken from stackoverflow
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function displayMatch() {
   const matchArray = findMatches(this.value, cities);
   const html = matchArray
